@@ -41,6 +41,8 @@ const grey = _grey;
 const meetCam = _meetCamColor;
 const conNot = _container;
 const purpleIconColor = _c525298;
+const singUpTextColor = _accentBlue;
+const secondryGreen = _c44DB4A;
 //
 
 const _black = Color(0xFF000000);
@@ -64,3 +66,4 @@ const _meetCamColor = Color(0xFF22B07D);
 const _container = Color(0xFF323440);
 const _cDD8491 = Color(0xFFDD8491);
 const _c525298 = Color(0xFF525298);
+const _c44DB4A  = Color(0xFF44DB4A);

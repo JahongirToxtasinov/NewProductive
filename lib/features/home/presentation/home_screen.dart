@@ -48,7 +48,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.all(20),
-                child: const Text('Previous'),
+                child: const Text(
+                  'Previous',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -66,7 +69,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.center,
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.all(20),
-                child: const Text('Next'),
+                child: const Text(
+                  'Next',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
           ),

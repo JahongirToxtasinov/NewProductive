@@ -35,7 +35,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           WScale(
             onTap: () =>
-                Navigator.of(context).pushReplacementNamed(AppRoutes.home),
+                Navigator.of(context).pushReplacementNamed(AppRoutes.loginScreen),
             child: Align(
               alignment: Alignment.centerRight,
               child: Padding(
@@ -140,7 +140,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   onTap: () {
                     if (page == 1) {
                       Navigator.of(context)
-                          .pushReplacementNamed(AppRoutes.home);
+                          .pushReplacementNamed(AppRoutes.loginScreen);
                     } else {
                       pageController.nextPage(
                         duration: const Duration(milliseconds: 250),
