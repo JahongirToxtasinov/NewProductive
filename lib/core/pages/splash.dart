@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:new_productive/constants/icons.dart';
 
 import '../../constants/routes.dart';
 
@@ -33,7 +35,11 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
+          const SizedBox(height: 80),
+          Center(
+            child: SvgPicture.asset(GlobalIcons.logo),
+          ),
+          const SizedBox(height: 12),
           Text(
           'Productive',
           style: Theme.of(context).textTheme.displayMedium,
