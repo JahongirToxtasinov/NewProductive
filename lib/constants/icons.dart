@@ -54,4 +54,5 @@ abstract class DrawerIcons {
 }
 abstract class NotesIcons {
   static const voice = '${_notes}voice.svg';
+  static const recycleBin = '${_notes}delete.svg';
 }

@@ -1,24 +1,25 @@
-import '../../../../core/exceptions/cache.dart';
-import '../../../../core/exceptions/server.dart';
-import '../../domain/entities/task.dart';
-import '../../domain/repository/tasks.dart';
-import '../data_source/local_data_source/tasks.dart';
+import '../mock_data.dart';
+import '../models/task.dart';
 
-class TasksRepositoryImpl implements TasksRepository {
-  final TasksLocalDataSource _tasksLocalDataSource;
+class TaskRepository {
+  Future<List<TaskModel>> getTasks() async {
+    await Future.delayed(const Duration(seconds: 2));
 
-  TasksRepositoryImpl({required TasksLocalDataSource dataSource})
-      : _tasksLocalDataSource = dataSource;
+    return (data['tasks'] as List)
+        .map(
+          (task) => TaskModel(
+        id: task['id'],
+        icon: task['icon'],
+        title: task['title'],
+        priority: task['priority'],
+        note: task['note'],
+        startDate: task['start_date'],
+        dueDate: task['due_date'],
+        isChecked: task['is_checked'],
+        iconColor: task['icon_color'],
 
-  @override
-  Future<List<TaskEntity>> getTasks() async {
-    try {
-      final tasksList = await _tasksLocalDataSource.getTasks();
-      return tasksList;
-    } on CacheException catch (error) {
-      return [];
-    } on ServerException catch (error) {
-      return [];
-    }
+      ),
+    )
+        .toList();
   }
 }

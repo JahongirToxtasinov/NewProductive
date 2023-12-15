@@ -35,6 +35,7 @@ const green = Colors.green;
 const verificationPageText = _c979797;
 const verificationPageText2 = _c407BFF;
 const pink = _cDD8491;
+const grey2 = _c8E8E8E;
 //
 const orange = _cFF8700;
 const grey = _grey;
@@ -56,7 +57,7 @@ const _c272C38 = Color(0xFF272C38);
 const _c006EE9 = Color(0xFF006EE9);
 const _c979797 = Color(0xFF979797);
 const _c407BFF = Color(0xFF407BFF);
-
+const _c8E8E8E = Color(0xFF8E8E8E);
 //
 const _cFF8700 = Color(0xFFFF8700);
 const _grey = Color(0xFFABABAB);

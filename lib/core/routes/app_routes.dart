@@ -12,7 +12,7 @@ class AppRouter {
   static Route<dynamic> router(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutes.splash:
-        return fade(const SplashScreen());
+        return fade(const HomeScreen());
       case AppRoutes.home:
         return fade(const HomeScreen());
       case AppRoutes.onboarding:

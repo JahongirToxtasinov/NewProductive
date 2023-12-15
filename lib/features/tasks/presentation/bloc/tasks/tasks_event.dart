@@ -1,16 +1,13 @@
 part of 'tasks_bloc.dart';
 
-@immutable
-abstract class TasksEvent {
-  const TasksEvent();
+sealed class TaskEvent {
+  const TaskEvent();
 }
 
-class GetTasksEvent extends TasksEvent {
-  final Function() onSuccess;
-  final Function(String errorMessage) onFailure;
+class LoadTasks extends TaskEvent {}
 
-  const GetTasksEvent({
-    required this.onSuccess,
-    required this.onFailure,
-  });
+class ToggleTaskCheckedValue extends TaskEvent {
+  final int id;
+
+  ToggleTaskCheckedValue({required this.id});
 }
